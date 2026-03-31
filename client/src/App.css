@@ -1,105 +1,46 @@
-.App {
-  text-align: center;
+/* ===== Global CSS Variables ===== */
+:root {
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --color-bg: #F4F6F8;
+  --color-surface: #FFFFFF;
+  --color-mta-blue: #0039A6;
+  --color-text-primary: #1A1A2E;
+  --color-text-secondary: #5A5A7A;
+  --color-text-muted: #8E8EA0;
+  --color-border: #E8EBF0;
+  --color-success: #00933C;
+  --color-danger: #EE352E;
+  --color-warning: #FF9800;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.1);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.wrapper {
-  max-width: min(800px, 100% - 4rem);
-  margin-inline: auto;
-}
-
-.wrapper header {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
-nav {
+/* ===== Global Reset & Base ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
   margin: 0;
-  padding-top: 0.5rem;
-  background-color: var(--accent-color);
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
   padding: 0;
 }
 
-nav a {
-  color: var(--background-color);
-  display: block;
-  --padding: 1rem;
-  padding: var(--padding);
-  text-decoration: none;
-  font-weight: bold;
-  --border-radius: 15px;
-  border-radius: 5px 5px 0 0;
-  position: relative;
-}
-nav a:hover::before,
-nav a:focus::before {
-  content: '';
-  position: absolute;
-  width: var(--border-radius);
-  height: var(--border-radius);
-  border-radius: 0 0 100vw 0;
-  box-shadow: 5px 5px 0 5px var(--background-color);
-  background-color: var(--accent-color);
-  bottom: 0;
-  left: calc(var(--padding) * -1 + 1px);
-}
-nav a:hover::after,
-nav a:focus::after {
-  content: '';
-  position: absolute;
-  width: var(--border-radius);
-  height: var(--border-radius);
-  border-radius: 0 0 0 100vw;
-  box-shadow: -5px 5px 0 5px var(--background-color);
-  background-color: var(--accent-color);
-  bottom: 0;
-  right: calc(var(--padding) * -1 + 1px);
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-nav a:hover,
-nav a:focus {
-  background-color: var(--background-color);
-  color: var(--accent-color);
-  outline: none;
+a {
+  color: var(--color-mta-blue);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #002D7A;
 }
