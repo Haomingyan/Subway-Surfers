@@ -261,6 +261,9 @@ function RealtimeData() {
               <span className="live-dot" />
               LIVE
             </span>
+            <Link to="/map" className="map-view-btn">
+              🗺 Map View
+            </Link>
           </div>
           <p className="app-subtitle">Real-time train arrivals across all MTA lines</p>
         </div>
